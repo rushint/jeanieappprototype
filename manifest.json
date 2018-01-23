@@ -1,0 +1,6 @@
+{
+    "baseURL": "http://doubleblacktech.com/genii-app/",
+    "bluemixURL": "http://genii-php-mysql.mybluemix.net/",
+    "mode": "DEV",
+    "isMaintenance": false
+}

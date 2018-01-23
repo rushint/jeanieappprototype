@@ -1,0 +1,19 @@
+$walkthrough-bg: #FFF;
+$walkthrough-color: #333;
+$walkthrough-subtitle-color: #C3C3C3;
+$walkthrough-buttons-border-color: rgba(lighten(#C3C1C1, 5%), .7);
+
+$walkthrough-slider-bg: #eef1f6;
+$walkthrough-slider-pager-color: #8c8c8e;
+$walkthrough-facebook-button-color: #FFF;
+
+$walkthrough-slider-height: 63%;
+$walkthrough-actions-height: 27%;
+$walkthrough-buttons-height: 10%;
+
+$walkthrough-slide-1-logo-ratio: 1 1;
+$walkthrough-other-slides-images-ratio: 55 37;
+
+// Merge maps
+$pre-img-ratios: append($pre-img-ratios, $walkthrough-slide-1-logo-ratio);
+$pre-img-ratios: append($pre-img-ratios, $walkthrough-other-slides-images-ratio);

@@ -1,0 +1,85 @@
+<ion-modal-view>
+  <ion-content id="concierge" class="background" scroll="false">
+
+    <div style="text-align: right; margin-top: 10px">
+      <button class="button button-outline button-assertive concierge-modal-close" ng-click="mystore1.closeConciergeModal()">Close</button>
+    </div>
+
+    <div id="mini-map-card" class="list card" ng-if="haveTTS">
+
+      <div class="item">
+        <h2 class="mini-map-response">{{locationText}}</h2>
+        <p>{{textSpoken}}</p>
+      </div>
+
+      <div class="item item-body map-container">
+        <section>
+          <div class="parent map-parent">
+            <div class="panzoom">
+              <img class="mini-map" ng-src="{{baseURL}}maps/maps-{{mapCode}}/{{mapName}}-{{mapCode}}-{{productCategoryId}}.png">
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </div>
+
+    <div class="white prompt center" style="font-weight: bold" ng-if="!haveTTS">
+      {{initialPrompt}}
+    </div>
+
+    <div class="center">
+      <img ng-show="speakState == 1" class="speak fix-bottom" ng-click="findProduct()" ng-src="images/speak-1.png"/>
+
+      <img ng-show="speakState == 2" class="speak fix-bottom" ng-click="stopSpeech()" ng-src="images/speak-2.1.png"/>
+      <img ng-show="speakState == 3" class="speak fix-bottom" ng-click="stopSpeech()" ng-src="images/speak-2.2.png"/>
+      <img ng-show="speakState == 4" class="speak fix-bottom" ng-click="stopSpeech()" ng-src="images/speak-2.3.png"/>
+
+      <img ng-show="speakState == 5" class="speak fix-bottom" ng-src="images/speak-3.png"/>
+    </div>
+
+    <!--Response Overlay-->
+    <!--<div id="concierge-result" ng-if="haveTTS">-->
+      <!--<div class="concierge-result" style="background-color: white">-->
+        <!--<div class="black center spokenText" style="text-align: center; margin">-->
+          <!--<span class="spoken-text" style="font-style: italic;">"{{textSpoken}}"</span>-->
+        <!--</div>-->
+
+        <!--<div style="text-align: center;" class="black center locationText" ng-click="sayText(locationText)">-->
+          <!--<i class="ion-volume-high"></i>&nbsp;&nbsp;<span class="location-text" style="font-style: italic; font-weight: bold">{{locationText}}</span>-->
+        <!--</div>-->
+
+        <!--<hr>-->
+
+        <!--&lt;!&ndash;White Scheme&ndash;&gt;-->
+        <!--<div class="button-bar" style="margin-bottom: 10px">-->
+          <!--<a class="button icon-left ion-chevron-left button-outline button-positive" ng-click="goComments()">Comment</a>-->
+          <!--<a class="button icon-right ion-chevron-right button-outline button-positive" ng-if="locationFound" ng-click="goMap()">See Map</a>-->
+        <!--</div>-->
+
+        <!--<div class="usefulText" style="text-align: center;">-->
+          <!--Did you find this information useful?-->
+        <!--</div>-->
+
+        <!--<div class="thumbs">-->
+          <!--<div class="button-bar">-->
+            <!--<a class="button button-clear noanswer" ng-class="{'sel': useful == 1}" ng-click="closeResult(1)">-->
+              <!--<i class="ion-thumbsup my-thumb"></i>-->
+              <!--<p style="margin: -20px 0 10px; color: #33cd5f;">YES!</p>-->
+            <!--</a>-->
+            <!--<a class="button button-clear noanswer" ng-class="{'sel': useful == -1}" ng-click="closeResult(-1)">-->
+              <!--<i class="ion-thumbsdown my-thumb" style="color: red"></i>-->
+              <!--<p style="margin: -20px 0 10px; color: red;">Not Really</p>-->
+            <!--</a>-->
+          <!--</div>-->
+        <!--</div>-->
+
+        <!--&lt;!&ndash;<div  style="text-align: center;">&ndash;&gt;-->
+        <!--&lt;!&ndash;<div style="text-align: center; display: inline">&ndash;&gt;-->
+        <!--&lt;!&ndash;<span ng-click="concierge.closeResult()"><i class="ion-ios-close-outline my-close"></i></span>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+        <!--&lt;!&ndash;</div>&ndash;&gt;-->
+      <!--</div>-->
+    <!--</div>-->
+  </ion-content>
+</ion-modal-view>

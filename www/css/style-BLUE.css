@@ -1,0 +1,515 @@
+a {
+    text-decoration: none;
+}
+
+ul.main-nav-panel.list {
+  margin-top: 45px;
+}
+
+.bar-footer {
+  height: 53px;
+  padding: 0;
+}
+
+.bar .button-bar > .button, .bar .buttons > .button {
+  min-height: 31px;
+  line-height: 19px;
+}
+
+i.in-footer {
+  font-size: 25px;
+}
+
+.rec-btn {
+    background-color: blue !important;
+}
+.stop-btn {
+    background-color: red !important;
+}
+.wait-btn {
+    background-color: yellow !important;
+}
+
+/* Overridden Ionic Styles */
+.bar-subheader {
+  -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+  box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+}
+ion-side-menu .item {
+  background-color: #396AB7;
+}
+
+.menu {
+  background-color: #396AB7;
+}
+
+a.item {
+  color: #fff;
+}
+
+[nav-bar-transition="ios"] [nav-bar="active"] .bar, [nav-bar-transition="ios"] [nav-bar="entering"] .bar {
+    /*background-color: rgba(57, 106, 183,1);*/
+    background-color: #396AB7;
+}
+
+.bar.bar-positive {
+    background-color: #396AB7;
+}
+
+.card {
+    margin: 10px 10px;
+}
+
+.modal {
+    -webkit-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    -moz-box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+    box-shadow: 2px 2px 5px 0px rgba(0,0,0,0.75);
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+
+    opacity: 1;
+    width: 90%; min-height: 70%; top: 10%; left: 5%; right: 5%; bottom: 10%;
+}
+.button-clear.button-clear.sel {
+    color: rgba(32, 191, 85, 1) !important;
+}
+.button-clear.button-clear.noanswer {
+    /*color: rgba(255, 255, 255, 0.8);*/
+    color: #33cd5f;
+}
+
+.bar-subheader .title {
+  line-height: 21px;
+  font-wieght: normal;
+  white-space: normal;
+}
+
+.bar-subheader button.button {
+  min-width: 50%;
+  margin: 0 auto;
+}
+/* END: Overridden Ionic Styles */
+
+/* concierge background */
+.background.scroll-content {
+    background: url(../images/concierge-bg.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    z-index: 2;
+}
+
+ion-side-menu .has-header {
+    top: 60px !important;
+}
+
+#concierge-result.has-header {
+    top: 50px !important;
+}
+
+#concierge .white {
+    color: white !important;
+}
+
+#concierge-result .black, #concierge-map .black {
+    color: black !important;
+}
+
+#concierge .center {
+    text-align: center;
+}
+
+#concierge .prompt {
+    color: white;
+}
+
+#concierge .speak {
+    width: 95%;
+}
+
+.fix-bottom {
+    position: fixed;
+    bottom: 50px;
+    left: 3%;
+}
+
+.quote {
+    color: blue;
+    font-size: 30px;
+    font-weight: bold;
+}
+
+#concierge .prompt {
+    margin-top: 122px;
+    font-size: 28px
+}
+
+.concierge-result, .concierge-map {
+    padding: 10px;
+
+    position: absolute; top: 50px; right: 15px; bottom: 20px; left: 15px;
+
+    -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0.75)";
+    filter: alpha(opacity=0.75);
+    -moz-opacity: 0.75;
+    -khtml-opacity: 0.75;
+    opacity: 0.75;
+
+    border-radius: 10px 10px 10px 10px;
+    -moz-border-radius: 10px 10px 10px 10px;
+    -webkit-border-radius: 10px 10px 10px 10px;
+    border: 0px solid #000000;
+
+    /*background: rgba(30, 144, 255, 0.5);*/
+    background: rgba(251, 251, 251, 0.3);
+
+    -moz-box-shadow:  2px 2px 5px 0px rgb(128,128,128);
+    -webkit-box-shadow:  2px 2px 5px 0px rgb(128,128,128);
+    box-shadow:  2px 2px 5px 0px rgb(128,128,128);
+}
+
+.concierge-result .spokenText, .concierge-map .spokenText {
+    font-size: 28px;
+    margin: 0 0 34px 0;
+}
+.concierge-result .locationText, .concierge-map .locationText {
+    font-size: 28px;
+    margin-bottom: 30px;
+    line-height: 1;
+}
+.concierge-result .usefulText, .concierge-map .usefulText {
+    font-size: 18px;
+    margin: 30px 10px 14px 10px;
+}
+.concierge-result .thumbs {
+    margin: 20px 0;
+}
+.concierge-result .my-thumb {
+    font-size: 5em;
+}
+.concierge-result .my-close {
+    font-size: 5em;
+    color: #337d4c;
+}
+.concierge-comment .my-save {
+    font-size: 5em;
+    color: #337d4c;
+}
+.concierge-result .comments {
+    margin: 20px 14px;
+}
+
+.button-clear.button-clear.sel {
+    max-height: 75px;
+}
+.button-clear.button-clear.noanswer {
+    max-height: 120px;
+}
+.enter-comments {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.item p.my-store {
+  color: #f2849a;
+  font-size: 10px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
+#hours p {
+  margin: 0;
+  font-size: 12px;
+}
+
+#address p {
+  margin: 0;
+  font-weight: bold;
+}
+
+ion-item.selected {
+  background-color: #20BF55;
+}
+
+.spoken-text {
+  font-size: 24px;
+}
+
+.location-text {
+  font-size: 24px;
+}
+
+/* *************************************** */
+/* Source: http://stephen.io/mediaqueries/ */
+
+/*iPhone 5 Portrait*/
+@media only screen
+    and (min-device-width : 320px)
+    and (max-device-width : 568px)
+    and (orientation : portrait) {
+
+    div.black.center.spokenText {
+      margin-bottom: 7px;
+    }
+
+    .spoken-text {
+      font-size: 20px;
+    }
+
+    .location-text {
+      font-size: 20px;
+    }
+
+    ul.main-nav-panel.list {
+      margin-top: 50px;
+    }
+
+    .fix-bottom {
+        bottom: 130px;
+    }
+
+    #concierge .prompt {
+        margin-top: 100px;
+        font-size: 20px
+    }
+
+    .concierge-result .spokenText, .concierge-map .spokenText {
+        font-size: 24px;
+        margin: 0 0 24px 0;
+    }
+    .concierge-result .locationText, .concierge-map .locationText {
+        font-size: 24px;
+        margin-bottom: 10px
+    }
+    .concierge-result .usefulText {
+        font-size: 14px;
+        margin-bottom: 10px;
+        margin: 10px 0 10px 0;
+    }
+    .concierge-result .thumbs {
+        margin: 14px 0 12px 0;
+    }
+    .concierge-result .my-thumb {
+        font-size: 5em;
+    }
+    .concierge-result .my-close {
+        font-size: 5em;
+    }
+    .concierge-comment .my-save {
+        font-size: 5em;
+    }
+
+    .concierge-result .comments {
+        margin: 14px 14px;
+    }
+    .button-clear.button-clear.sel {
+        max-height: 75px;
+    }
+    .button-clear.button-clear.noanswer {
+        max-height: 120px;
+    }
+    .enter-comments {
+        font-size: 16px;
+        margin-bottom: 4px;
+    }
+}
+
+/*iPhone 6 Portrait*/
+@media only screen
+    and (min-device-width : 375px)
+    and (max-device-width : 667px)
+    and (orientation : portrait) {
+
+    ul.main-nav-panel.list {
+        margin-top: 55px;
+    }
+
+    .fix-bottom {
+        bottom: 120px;
+    }
+
+    #concierge .prompt {
+        margin-top: 80px;
+        font-size: 26px
+    }
+
+    .concierge-result .spokenText {
+        font-size: 28px;
+        margin: 0 0 34px 0;
+    }
+    .concierge-result .locationText, .concierge-map .locationText {
+        font-size: 28px;
+        margin-bottom: 20px;
+        line-height: 1;
+    }
+    .concierge-result .usefulText {
+        font-size: 18px;
+        margin: 20px 10px;
+    }
+    .concierge-result .thumbs {
+        margin: 20px 14px;
+    }
+    .concierge-result .my-thumb {
+        font-size: 5em;
+    }
+    .concierge-result .my-close {
+        font-size: 5em;
+    }
+    .concierge-comment .my-save {
+        font-size: 5em;
+    }
+    .concierge-result .comments {
+        margin: 20px 14px;
+    }
+
+    .button-clear.button-clear.sel {
+        max-height: 75px;
+    }
+    .button-clear.button-clear.noanswer {
+        max-height: 120px;
+    }
+    .enter-comments {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+/* iPhone 6+ Portrait */
+@media only screen
+    and (min-device-width : 414px)
+    and (max-device-width : 736px)
+    and (orientation : portrait) {
+
+    #concierge .prompt {
+        margin-top: 122px;
+        font-size: 28px
+    }
+
+    .concierge-result .spokenText {
+        font-size: 28px;
+        margin: 0 0 44px 0;
+    }
+    .concierge-result .locationText, .concierge-map .locationText {
+        font-size: 28px;
+        margin-bottom: 30px;
+        line-height: 1;
+    }
+    .concierge-result .usefulText {
+        font-size: 20px;
+        margin: 30px 10px;
+    }
+    .concierge-result .thumbs {
+        margin: 20px 14px;
+    }
+    .concierge-result .my-thumb {
+        font-size: 5em;
+    }
+    .concierge-result .my-close {
+        font-size: 6em;
+    }
+    .concierge-comment .my-save {
+        font-size: 5em;
+    }
+    .concierge-result .comments {
+        margin: 20px 14px;
+    }
+
+    .button-clear.button-clear.sel {
+        max-height: 75px;
+    }
+    .button-clear.button-clear.noanswer {
+        max-height: 120px;
+    }
+    .enter-comments {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+}
+
+
+div.contained {
+  height: 40vh;
+  overflow: scroll;
+}
+
+.bar.bar-positive.bar-footer {
+  /*background-image: linear-gradient(180deg, #0c60ee, #0c60ee 50%, transparent 50%);*/
+    background-color: #396AB7;
+}
+
+/*.dbt-footer-bar a.active-tab {*/
+  /*background-color: #303030;*/
+/*}*/
+
+
+
+
+
+
+/* ********************* */
+/* Source: http://qnimate.com/overview-of-css3-media-queries/ */
+/* Smartphones (portrait and landscape) */
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+  /* Styles */
+
+}
+
+/* Smartphones (landscape) */
+@media only screen and (min-width : 321px) {
+  /* Styles */
+}
+
+/* Smartphones (portrait) */
+@media only screen and (max-width : 320px) {
+  /* Styles */
+
+}
+
+/* iPads (portrait and landscape) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  /* Styles */
+}
+
+/* iPads (landscape) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : landscape) {
+  /* Styles */
+}
+
+/* iPads (portrait) */
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) and (orientation : portrait) {
+  /* Styles */
+}
+
+/* Desktops and laptops */
+@media only screen and (min-width : 1224px) {
+  /* Styles */
+}
+
+/* Large screens */
+@media only screen and (min-width : 1824px) {
+  /* Styles */
+}
+
+/* iPhone 4. Comma can be used to apply same rules to multiple media queries. */
+@media only screen and (-webkit-min-device-pixel-ratio : 1.5), only screen and (min-device-pixel-ratio : 1.5) {
+  /* Styles */
+
+}
+
+/*iPhone 6 and iPhone 6+ portrait and landscape*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px){
+}
+
+/*iPhone 6 and iPhone 6+ portrait*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : portrait){
+
+}
+
+/*iPhone 6 and iPhone 6+ landscape*/
+@media only screen and (max-device-width: 640px), only screen and (max-device-width: 667px), only screen and (max-width: 480px) and (orientation : landscape){
+
+}

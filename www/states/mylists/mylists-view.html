@@ -1,0 +1,24 @@
+<ion-view>
+    <div class="bar bar-subheader">
+      <button class="button button-small button-positive button-outline" ng-click="mylists.addList()">
+          Add a List
+      </button>
+    </div>
+
+  <ion-content class="background has-subheader" scroll="true">
+
+    <div ng-if="mylists.lists < 1" style="text-align: center; font-size: 20px; margin-top: 50px;">
+      - You have not created a list yet -
+    </div>
+
+    <ion-list class="list">
+      <ion-item class="item item-text-wrap item-remove-animate" ng-repeat="list in mylists.lists" ng-click="mylists.goList(list)">
+        <p style="font-weight: 700">{{list.list_name}} <span ng-if="list.numitems > 0" class="num-items">{{list.numitems}}</span></p>
+        <ion-option-button class="button-royal list-action-wrapper" ng-click="mylists.removeList(list, $index)">
+          <span class="list-action-text">Remove</span>
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

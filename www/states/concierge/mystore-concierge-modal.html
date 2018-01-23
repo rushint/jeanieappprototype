@@ -1,0 +1,34 @@
+<ion-modal-view>
+    <ion-content id="concierge-result" scroll="false" padding="true">
+        <div class="black center spokenText" style="text-align: center;">
+            <span style="font-weight: bold; font-size: 20px;">{{detailObj.name}}</span>
+        </div>
+
+        <hr>
+
+        <div id="address" style="text-align: center">
+            <p style="">{{detailObj.address1}}</p>
+            <p style="">{{detailObj.city}}, {{detailObj.state}} {{detailObj.zip}}</p>
+            <p style="">240-555-1212</p>
+        </div>
+
+        <hr style="width: 80%">
+
+        <div id="hours" style="text-align: center">
+          <p><strong>Sunday: </strong> <span>5AM – 12AM</span></p>
+          <p><strong>Monday: </strong> <span>5AM – 12AM</span></p>
+          <p><strong>Tuesday:	</strong> <span>5AM – 12AM</span></p>
+          <p><strong>Wednesday:	</strong> <span>5AM – 12AM</span></p>
+          <p><strong>Thursday:	</strong> <span>5AM – 12AM</span></p>
+          <p><strong>Friday:	</strong> <span>5AM – 12AM</span></p>
+          <p><strong>Saturda:y	</strong> <span>5AM – 12AM</span></p>
+        </div>
+
+        <div style="text-align: center; margin-top: 20px;" ng-click="concierge.closeMyStoreModal()">
+            <img style="height: 80px" src="images/close_btn.png"><br>
+            <span style="font-weight: bold; font-size: 20px;">Close</span>
+        </div>
+
+    </ion-content>
+
+</ion-modal-view>

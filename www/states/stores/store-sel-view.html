@@ -1,0 +1,40 @@
+<ion-view class="background">
+
+    <div class="bar bar-subheader" style="background-color: #84d1f2">
+        <h2 class="title" style="font-weight: bold; font-size: 20px">{{storesel.currStoreObj.name}}</h2>
+    </div>
+
+  <ion-content id="store-sel" class="background has-subheader" scroll="false" padding="true">
+    <div id="address" style="text-align: center">
+      <p style="">{{storesel.currStoreObj.address1}}</p>
+      <p style="">{{storesel.currStoreObj.city}}, {{storesel.currStoreObj.state}} {{storesel.currStoreObj.zip}}</p>
+      <p style="">240-555-1212</p>
+    </div>
+
+    <hr style="width: 80%">
+
+    <div id="hours" style="text-align: center">
+      <p><strong>Sunday: </strong> <span>5AM – 12AM</span></p>
+      <p><strong>Monday: </strong> <span>5AM – 12AM</span></p>
+      <p><strong>Tuesday:	</strong> <span>5AM – 12AM</span></p>
+      <p><strong>Wednesday:	</strong> <span>5AM – 12AM</span></p>
+      <p><strong>Thursday:	</strong> <span>5AM – 12AM</span></p>
+      <p><strong>Friday:	</strong> <span>5AM – 12AM</span></p>
+      <p><strong>Saturda:y	</strong> <span>5AM – 12AM</span></p>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0" ng-click="storesel.setMyStore(storesel.currStoreObj)" ng-hide="storesel.currStoreObj.storeCode == storesel.storeSelObj.storeCode">
+      <button class="button button-block button-assertive">
+      Set As My Store
+      </button>
+    </div>
+
+    <div style="text-align: center; margin: 30px 0" ng-click="storesel.goConcierge()" ng-hide="storesel.currStoreObj.storeCode != storesel.storeSelObj.storeCode">
+      <button class="button button-block button-assertive">
+        Find Products
+      </button>
+    </div>
+
+  </ion-content>
+
+</ion-view>

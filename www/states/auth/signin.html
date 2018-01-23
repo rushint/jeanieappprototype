@@ -1,0 +1,51 @@
+<ion-view class="login-view auth-view" cache-view="false">
+  <ion-content class="auth-content" has-bouncing="false">
+    <div class="content-wrapper">
+      <div class="row row-no-padding everything-but-legal">
+        <div class="col">
+
+          <!--<div class="row social-buttons-row">-->
+            <!--<div class="col">-->
+              <!--<button class="button button-block icon-left ion-social-facebook social-button facebook-button" ng-click="doLogIn()">-->
+                <!--<span class="inner-text">Log in via Facebook</span>-->
+              <!--</button>-->
+              <!--<button class="button button-block icon-left ion-social-googleplus social-button google-button" ng-click="doLogIn()">-->
+                <!--<span class="inner-text">Log in via Google</span>-->
+              <!--</button>-->
+            <!--</div>-->
+          <!--</div>-->
+
+          <form name="signin.user" class="row form-container" novalidate>
+            <div class="col">
+              <div class="list">
+                <div class="item item-divider">
+                  <span>Sign in</span>
+                </div>
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">Email</span>
+                  <input type="email" placeholder="required" required ng-model="signin.user.email">
+                </label>
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">Password</span>
+                  <input type="password" placeholder="required" required ng-model="signin.user.password">
+                </label>
+              </div>
+
+              <button class="button action-button button-block button-balanced" ng-click="signin.doSignIn()" ng-disabled="signin.user.$invalid || !signin.user.$dirty">LOGIN</button>
+
+              <div class="col alt-actions-container" style="text-align: center;">
+                <a class="button button-outline button-small button-stable forgot-password-button" ng-click="signin.forgotPassword()">Forgot Password?</a>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!--<div class="row legal-row">-->
+        <!--<div class="col">-->
+          <!--<p class="legal-text">By logging in your agree to Jeanie's <a>Terms of Service</a>, <a>Privacy Policy</a>, <a>Cookie Policy</a> and <a>Content Policies</a></p>-->
+        <!--</div>-->
+      <!--</div>-->
+    </div>
+  </ion-content>
+</ion-view>

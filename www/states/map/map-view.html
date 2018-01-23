@@ -1,0 +1,22 @@
+<ion-view>
+  <div class="bar bar-subheader" style="background-color: #84d1f2; height: 75px;" ng-click="map.sayText()">
+    <div style="position: relative; width: 100%">
+      <div style="position: relative; position: relative; text-align: center; font-size: 19px; margin-bottom: 5px;">- {{map.categoryName}} -</div>
+      <div style="position: relative;" class="title map"><span ng-if="map.isTTS()"><i class="ion-volume-high"></i>&nbsp;&nbsp;</span>"{{map.currResponse}}"</div>
+    </div>
+  </div>
+
+    <ion-content id="concierge" class="background has-subheader" style="height: 100vh" scroll="false">
+      <section>
+        <div class="parent">
+          <div class="panzoom">
+            <img ng-src="{{map.mapURL}}" width="409" height="864">
+          </div>
+        </div>
+      </section>
+
+      <div ng-if="!map.gotMap" class="spinner center">
+        <ion-spinner icon="spiral"></ion-spinner>
+      </div>
+    </ion-content>
+</ion-view>

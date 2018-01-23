@@ -1,0 +1,31 @@
+<ion-view class="background">
+
+  <!--<div class="bar bar-subheader" style="xbackground-color: #84d1f2">-->
+    <!--<button class="button button-small button-positive button-outline" ng-click="mystore1.goStores()">-->
+      <!--Change Store-->
+    <!--</button>-->
+  <!--</div>-->
+
+    <ion-content id="mystore1-list" class="background xhas-subheader">
+        <ion-spinner icon="circles" ng-show="locator.showSpinner"></ion-spinner>
+
+        <div style="text-align: center">
+            <p class="title">{{mystore1.myStoreObj.name}} - {{mystore1.myStoreObj.city}}, {{mystore1.myStoreObj.state}} {{mystore1.myStoreObj.zip}}</p>
+
+            <button class="button button-small button-positive button-outline" ng-click="mystore1.goStores()">
+                Change Store
+            </button>
+        </div>
+
+        <ion-list>
+            <ion-item class="location-item item-text-wrap item-avatar item-icon-right" ng-class="{'selected': product.productCategoryId == mystore1.selectedProductId}" ng-repeat="product in mystore1.products track by $index" ng-click="mystore1.getCat2(product)">
+              <img src="icons/prodcat-000.png">
+              <div class="location-item-address">
+                <h2>{{product.categoryName}}</h2>
+              </div>
+              <i class="icon ion-ios-arrow-forward"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>

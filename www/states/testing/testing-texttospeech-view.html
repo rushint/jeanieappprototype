@@ -1,0 +1,37 @@
+<ion-view>
+
+    <ion-content>
+        <div class="padding">
+            <h4>Testing Text To Speech To Text - TTS Plugin</h4>
+
+            <hr>
+
+            <form name="toolsForm" novalidate>
+                <div class="list list-inset locator-form-input">
+                    <div class="item item-input">
+                        <i class="icon ion-search placeholder-icon"></i>
+                        <input id="addr" type="text" class="item item-input" placeholder="Enter Query Here"
+                               ng-model="test.myText">
+                    </div>
+                </div>
+            </form>
+
+            <hr>
+
+            <div>
+                <button style="min-height: 100px; font-size: 24px" ng-if="!test.isInProgress" ng-click="test.submitText()" class="button button-block button-positive">
+                    Say Text Above
+                </button>
+            </div>
+
+            <div>
+                <button style="min-height: 100px; font-size: 24px" ng-if="test.isInProgress" disabled class="button button-block button-stable">
+                    Processing
+                </button>
+            </div>
+
+        </div>
+
+    </ion-content>
+
+</ion-view>

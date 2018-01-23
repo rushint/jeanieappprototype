@@ -1,0 +1,35 @@
+<ion-view>
+
+    <ion-content>
+        <div class="padding">
+            <h4>Testing Speech To Text - IBM Bluemix</h4>
+
+            <hr>
+
+            <div>
+                <button style="min-height: 100px; font-size: 24px" ng-click="stt.recordAudio()" ng-if="!stt.isAudioCaptured && stt.isComplete && !stt.isListening" class="button button-block button-positive">
+                    Record Audio
+                </button>
+            </div>
+
+            <div>
+                <button style="min-height: 400px; font-size: 24px" ng-click="stt.stopAudio()" ng-if="stt.isListening" class="button button-block button-assertive">
+                    Stop Audio
+                </button>
+            </div>
+
+            <div>
+                <button style="min-height: 100px; font-size: 24px" ng-click="stt.processAudio()" class="button button-block button-positive">
+                    Processing Audio
+                </button>
+            </div>
+
+          <hr>
+
+          <h4>Status:</h4>
+          <p ng-bind-html="stt.myLog"></p>
+
+        </div>
+    </ion-content>
+
+</ion-view>

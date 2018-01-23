@@ -1,0 +1,190 @@
+.auth-view
+{
+	background-color: $auth-bg;
+	color: $auth-color;
+
+	.auth-header
+	{
+		background-color: $auth-header-bg !important;
+		background: $auth-header-bg !important;
+		border: none !important;
+		background-size: 0px !important; // To remove bottom border on header
+
+		.title
+		{
+			color: $auth-color;
+			font-weight: 400;
+		}
+
+		.buttons
+		{
+			position: absolute;
+	    top: 5px;
+	    left: 5px;
+	    bottom: 5px;
+		}
+
+		.cancel-button
+		{
+			color: $auth-header-icon-color;
+
+			&::before
+			{
+				font-size: 46px !important;
+			}
+		}
+	}
+
+	.auth-content
+	{
+		margin: 0px;
+		padding: 0px;
+
+		.scroll
+		{
+			height: 100%;
+		}
+
+		.content-wrapper
+		{
+			display: flex;
+			flex-wrap: wrap;
+			align-content: space-between;
+			height: 100%;
+		}
+	}
+
+	.social-button
+  {
+    text-align: left;
+		color: #FFF;
+    padding-left: 0px;
+    border: none;
+    line-height: 47px;
+
+    &.icon-left:before
+    {
+      padding: 3px 15px;
+      border-radius: 4px 0px 0px 4px;
+			width: 50px;
+  		text-align: center;
+    }
+
+    .inner-text
+    {
+      margin-left: 15px;
+    }
+  }
+	.facebook-button
+  {
+    background-color: $facebook;
+
+		&.activated
+		{
+		  background-color: darken($facebook, 4%);
+		}
+
+    &.icon-left:before
+    {
+      background-color: darken($facebook, 8%);
+    }
+  }
+	.google-button
+  {
+    background-color: $google;
+
+		&.activated
+		{
+		  background-color: darken($google, 4%);
+		}
+
+    &.icon-left:before
+    {
+      background-color: darken($google, 8%);
+    }
+  }
+
+	.form-container
+	{
+		.item-divider
+		{
+			margin: 0px;
+			border: none;
+			background-color: transparent;
+			text-transform: uppercase;
+			color: $auth-alt-color;
+			font-size: 12px;
+			word-spacing: 1px;
+			padding-left: 0px;
+			padding-right: 0px;
+		}
+
+		.item-input
+		{
+			border: none;
+			padding: 0px;
+			margin-bottom: 15px;
+
+			&:last-child
+			{
+				margin-bottom: 0px;
+			}
+
+			input,
+			textarea
+			{
+				background: transparent;
+				color: rgba(lighten($auth-color, 5%), .8);
+
+				@include _placeholder
+				{
+					color: $auth-alt-color;
+					letter-spacing: 1px;
+					font-weight: 300;
+				}
+			}
+		}
+
+		.input-label
+		{
+			padding: 0px;
+			text-transform: uppercase;
+			color: $auth-color;
+			font-size: 12px;
+			letter-spacing: 1px;
+  		font-weight: 500;
+		}
+
+		.action-button
+		{
+			background-color: $login;
+	    margin-bottom: 0px;
+	    letter-spacing: 1px;
+	    font-size: 15px;
+		}
+
+		.alt-actions-container
+	  {
+	    text-align: center;
+	  }
+	}
+
+	.legal-row
+	{
+		color: $auth-alt-color;
+		font-size: 11px;
+		text-align: center;
+		padding: 5px 10px;
+
+		a
+		{
+			color: rgba($auth-color, .9);
+			text-decoration: underline;
+		}
+
+		.legal-text
+		{
+			margin: 5px 0px;
+		}
+	}
+}

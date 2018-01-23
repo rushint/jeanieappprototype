@@ -1,0 +1,22 @@
+<ion-view>
+
+    <div class="bar bar-subheader" style="background-color: #84d1f2">
+        <h2 class="title">Choose Your Store</h2>
+    </div>
+
+    <ion-content class="background has-subheader" scroll="true">
+        <div class="padding">
+
+          <div class="item item-icon-right" ng-repeat="location in store.locations track by $index" ng-click="store.goStoreSel(location)">
+              <!--<img ng-src="images/{{location.icon}}">-->
+              <p class="my-store" ng-if="location.storeCode == store.currLocation">my store</p>
+              <h2 style="margin-top: 0px;">{{location.name}}</h2>
+              <p>{{location.address1}} <br>{{location.city}}, {{location.state}} {{location.zip}}</p>
+              <hr>
+              <i class="icon ion-chevron-right"></i>
+          </div>
+
+        </div>
+    </ion-content>
+
+</ion-view>

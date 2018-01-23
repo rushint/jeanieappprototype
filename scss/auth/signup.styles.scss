@@ -1,0 +1,16 @@
+.signup-view
+{
+	.pre-button-text
+	{
+		line-height: 28px;
+	  min-height: 30px;
+	  display: inline-block;
+	}
+
+	.login-button
+	{
+		color: $auth-color !important;
+		font-size: 14px;
+		font-weight: 500;
+	}
+}

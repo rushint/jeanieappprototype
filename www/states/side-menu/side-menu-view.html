@@ -1,0 +1,92 @@
+<ion-side-menus enable-menu-with-back-views="true">
+
+    <!-- App Main Right Side Menu -->
+    <ion-side-menu side="right">
+        <header class="bar bar-header bar-positive">
+            <h1 class="title">Menu [{{app.currStoreObj.storeCode}}]</h1>
+        </header>
+
+        <ion-content>
+            <ul class="main-nav-panel list">
+                <li><a class="item" menu-close nav-clear href="#/app/stores"><i class="ion-ios-cart-outline"></i>&nbsp;&nbsp;Choose Your Store</a></li>
+                <!--<li><a class="item" menu-close nav-clear href="#/app/history"><i class="ion-ios-list-outline"></i>&nbsp;&nbsp;Your History</a></li>-->
+                <!--<li><a class="item" menu-close nav-clear href="#"><i class="ion-ios-list-outline"></i>&nbsp;&nbsp;Your Profile</a></li>-->
+                <hr>
+                <li><a class="item" menu-close nav-clear ng-click="app.signInOut()"><i class="ion-ios-list-outline"></i>&nbsp;&nbsp;{{app.signInSignOut}}</a></li>
+                <li><a class="item" menu-close nav-clear href="#/app/about"><i class="ion-ios-information-outline"></i>&nbsp;&nbsp;About Jeanie</a></li>
+                <!--<hr>-->
+                <!--<li><a class="item" menu-close nav-clear href="#/app/testing"><i class="ion-ios-information-outline"></i>&nbsp;&nbsp;ANDROID TESTING</a></li>-->
+            </ul>
+        </ion-content>
+    </ion-side-menu>
+
+    <!-- App Main Content -->
+    <ion-side-menu-content drag-content="false">
+
+        <!--Header Nav Bar-->
+        <ion-nav-bar class="bar-positive">
+
+            <ion-nav-back-button class="button-clear" ng-click="goBackHandler()">
+                <i class="ion-arrow-left-c"></i> Back
+            </ion-nav-back-button>
+
+            <ion-nav-title>JEANIE</ion-nav-title>
+
+            <ion-nav-buttons side="right">
+                <button class="button button-icon button-balanced ion-navicon icon-right side-menu-label" ng-click="app.toggleRightMenu()">{{menuLabel}}</button>
+            </ion-nav-buttons>
+        </ion-nav-bar>
+
+        <!--App Content-->
+        <ion-nav-view name="appContent" animation="slide-right-left"></ion-nav-view>
+
+        <!--Concierge Panel-->
+        <div id="concierge" ng-class="{'concierge-panel':app.displayConcierge}">
+
+            <!--Request Text-->
+            <div class="request center">
+              {{app.concierge.requestText}}&nbsp;
+            </div>
+
+            <!--Response Text-->
+            <div class="response center" style="font-weight: bold">
+                {{app.concierge.responseText}}
+            </div>
+
+            <div ng-if="app.concierge.requestText != ''" style="padding: 0 10px">
+              <button class="map center button button-block button-positive icon-left" ng-click="app.goMap()">
+                <i class="icon ion-ios-location"></i>&nbsp;&nbsp;&nbsp;Map It!
+              </button>
+            </div>
+
+            <div style="position: fixed; bottom: 63px; right: 10px;">
+                <button class="button button-small button-outline button-positive" ng-click="hideConcierge()">close</button>
+            </div>
+        </div>
+
+        <!--Floating Speech Button-->
+        <div ng-if="app.showSpeechHint()" class="concierge-hint">
+          Tap button below to speak
+        </div>
+
+        <div ng-if="app.showSpeechButton()" class="concierge-button" ng-class="{'concierge-large':app.displayConcierge}" ng-click="toggleConcierge()">
+          <img ng-src="images/speak-button-{{app.speakState}}.png" class="concierge-image" ng-class="{'concierge-image-large':app.displayConcierge}">
+        </div>
+
+        <!--Footer-->
+        <ion-footer-bar class="bar-positive">
+            <div class="dbt-footer-bar button-bar">
+                <a class="button button-positive" ng-class="{'active-tab':app.currState == 'app.mylists'}" ng-click="app.goMyList()">
+                    <i class="in-footer ion-ios-list-outline"></i>
+                    <span class="block">Your List</span>
+                </a>
+                <a class="button button-positive" ng-class="{'active-tab':app.currState == 'app.mystore'}" ng-click="app.goMyStore()">
+                    <i class="in-footer ion-ios-cart-outline"></i>
+                    <span class="block">My Store</span>
+                </a>
+            </div>
+        </ion-footer-bar>
+
+    </ion-side-menu-content>
+
+</ion-side-menus>

@@ -1,0 +1,74 @@
+<ion-view>
+    <div class="bar bar-subheader" style="background-color: #84d1f2" ng-click="concierge.showMyStoreModal()">
+      <button class="button button-light">
+          <p class="title" style="font-weight: bold">{{concierge.currStore}}</p>
+      </button>
+    </div>
+
+    <ion-content id="concierge" class="background" scroll="false">
+
+        <div class="white prompt center" style="font-weight: bold" ng-if="!concierge.haveTTS">
+            {{concierge.initialPrompt}}
+        </div>
+
+        <!--<div class="center" ng-if="!concierge.haveTTS">-->
+            <!--<img ng-show="concierge.speakState == 1" class="speak fix-bottom" ng-click="concierge.findProduct()" ng-src="images/speak-1.png"/>-->
+
+            <!--<img ng-show="concierge.speakState == 2" class="speak fix-bottom" ng-click="concierge.stopSpeech()" ng-src="images/speak-2.1.png"/>-->
+            <!--<img ng-show="concierge.speakState == 3" class="speak fix-bottom" ng-click="concierge.stopSpeech()" ng-src="images/speak-2.2.png"/>-->
+            <!--<img ng-show="concierge.speakState == 4" class="speak fix-bottom" ng-click="concierge.stopSpeech()" ng-src="images/speak-2.3.png"/>-->
+
+            <!--<img ng-show="concierge.speakState == 5" class="speak fix-bottom" ng-src="images/speak-3.png"/>-->
+        <!--</div>-->
+
+        <!--Response Overlay-->
+        <div id="concierge-result" ng-if="concierge.haveTTS">
+            <div class="concierge-result" style="background-color: white">
+                <div class="black center spokenText" style="text-align: center; margin">
+                    <span class="spoken-text" style="font-style: italic;">"{{concierge.textSpoken}}"</span>
+                </div>
+
+                <div style="text-align: center;" class="black center locationText" ng-click="concierge.sayText(concierge.locationText)">
+                  <i class="ion-volume-high"></i>&nbsp;&nbsp;<span class="location-text" style="font-style: italic; font-weight: bold">{{concierge.locationText}}</span>
+                </div>
+
+                <hr>
+
+                <!--Blue Scheme-->
+                <!--<div class="button-bar" style="margin-bottom: 10px">-->
+                    <!--<a class="button icon-left ion-chevron-left button-balanced" ng-click="concierge.goComments()">Comment</a>-->
+                    <!--<a class="button icon-right ion-chevron-right button-balanced" ng-if="concierge.locationFound" ng-click="concierge.goMap()">See Map</a>-->
+                <!--</div>-->
+
+                <!--White Scheme-->
+                <div class="button-bar" style="margin-bottom: 10px">
+                  <a class="button icon-left ion-chevron-left button-outline button-positive" ng-click="concierge.goComments()">Comment</a>
+                  <a class="button icon-right ion-chevron-right button-outline button-positive" ng-if="concierge.locationFound" ng-click="concierge.goMap()">See Map</a>
+                </div>
+
+              <div class="usefulText" style="text-align: center;">
+                Did you find this information useful?
+              </div>
+
+              <div class="thumbs">
+                <div class="button-bar">
+                  <a class="button button-clear noanswer" ng-class="{'sel': concierge.useful == 1}" ng-click="concierge.closeResult(1)">
+                    <i class="ion-thumbsup my-thumb"></i>
+                    <p style="margin: -20px 0 10px; color: #33cd5f;">YES!</p>
+                  </a>
+                  <a class="button button-clear noanswer" ng-class="{'sel': concierge.useful == -1}" ng-click="concierge.closeResult(-1)">
+                    <i class="ion-thumbsdown my-thumb" style="color: red"></i>
+                    <p style="margin: -20px 0 10px; color: red;">Not Really</p>
+                  </a>
+                </div>
+              </div>
+
+                <!--<div  style="text-align: center;">-->
+                    <!--<div style="text-align: center; display: inline">-->
+                        <!--<span ng-click="concierge.closeResult()"><i class="ion-ios-close-outline my-close"></i></span>-->
+                    <!--</div>-->
+                <!--</div>-->
+            </div>
+        </div>
+    </ion-content>
+</ion-view>

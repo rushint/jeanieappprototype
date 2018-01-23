@@ -1,0 +1,39 @@
+<ion-view class="walkthrough-view" cache-view="false">
+
+  <ion-content class="intro-content has-header" scroll="false">
+    <div class="row row-no-padding" style="text-align: center; background-color: #eef1f6;">
+      <div class="col">
+            <div class="row row-no-padding">
+              <div class="col">
+                <div class="logo-image-container">
+                  <!--<pre-img ratio="_1_1" helper-class="logo-image">-->
+                    <img ng-src="images/speak-logo.png" width="100%">
+                  <!--</pre-img>-->
+                </div>
+                <h3 class="slide-sub-title">Shopping Made Easier!</h3>
+              </div>
+            </div>
+      </div>
+    </div>
+
+    <div class="row row-center actions-row" style="text-align: center">
+      <div class="col" style="margin-top: 10px">
+        <p class="main-subtitle">
+          Sign up. You know you want to. It will take less than 5 seconds.
+        </p>
+
+        <!--<button class="button button-block facebook-connect-button" ng-click="walkthrough.facebookAuth()">Sign up via Facebook</button>-->
+        <!--<fb:login-button data-auto-logout-link="true" scope="public_profile,email" size="large"></fb:login-button>-->
+
+        <p class="second-subtitle">
+          We will never post anything without your permission. Pinky promise.
+        </p>
+      </div>
+    </div>
+
+    <div class="button-bar signin-signup">
+      <a class="button button-balanced icon-left ion-star" ng-click="walkthrough.signUp()"style="border-right-color: white; border-width: 1px 1px 1px 1px; line-height: 49px;">SIGN UP</a>
+      <a class="button button-balanced icon-right ion-log-in" ng-click="walkthrough.signIn()" style="line-height: 49px;">SIGN IN</a>
+    </div>
+  </ion-content>
+</ion-view>

@@ -1,0 +1,55 @@
+<ion-view>
+    <ion-content id="concierge" class="background" scroll="false" padding="true">
+
+        <div class="concierge-comment">
+            <!--WHITE Scheme-->
+            <div class="card">
+              <div class="item item-text-wrap" style="text-align: center; background-color: #fff;">
+                <span style="font-size: 14px; color: #000">What Jeanie heard you say ...</span>
+                <br>
+                <span style="font-size: 14px; font-style: italic; font-weight: bold; color: black">{{comments.requestText}}</span>
+              </div>
+            </div>
+
+            <div class="card">
+              <div class="item item-text-wrap" style="text-align: center; background-color: #fff;">
+                <span style="font-size: 14px; color: #000">Jeanie's response ...</span>
+                <br>
+                <span style="font-size: 14px; font-style: italic; font-weight: bold; color: black">{{comments.responseText}}</span>
+              </div>
+            </div>
+
+            <!--BLUE Scheme-->
+            <!--<div class="card">-->
+                <!--<div class="item item-text-wrap" style="text-align: center; background-color: #20BF55; color: #FBFBFF;">-->
+                    <!--<span style="font-size: 14px; color: #000">What Jeanie heard you say ...</span>-->
+                    <!--<br>-->
+                    <!--<span style="font-size: 14px; font-style: italic; font-weight: bold">{{comments.requestText}}</span>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <!--<div class="card">-->
+                <!--<div class="item item-text-wrap" style="text-align: center; background-color: #20BF55; color: #FBFBFF;">-->
+                    <!--<span style="font-size: 14px; color: #000">Jeanie's response ...</span>-->
+                    <!--<br>-->
+                    <!--<span style="font-size: 14px; font-style: italic; font-weight: bold">{{comments.responseText}}</span>-->
+                <!--</div>-->
+            <!--</div>-->
+
+            <hr style="margin: 20px 0">
+
+            <div class="comments">
+                <div class="enter-comments">Enter your comments below:</div>
+                <label class="item item-input text">
+                    <textarea placeholder="Comments" rows="5" ng-model="comments.comments" name="comments"></textarea>
+                </label>
+            </div>
+
+            <div style="text-align: center; margin-top: 20px;" ng-click="comments.saveComments()">
+                <i class="ion-ios-checkmark-outline my-save"></i>
+                <p>Save and Return</p>
+            </div>
+
+        </div>
+    </ion-content>
+</ion-view>

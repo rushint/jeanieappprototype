@@ -1,0 +1,33 @@
+<ion-view>
+  <div class="bar bar-subheader">
+    <button class="button button-small button-positive button-outline" ng-click="myitems.addListItem()">
+      Add an Item to your list
+    </button>
+  </div>
+
+  <ion-content class="background has-subheader" scroll="true">
+
+    <h3 style="padding: 5px; text-align: center">{{myitems.currListName}}</h3>
+
+    <div ng-if="myitems.listItems < 1" style="text-align: center; font-size: 16px;margin-top: 50px;">
+      - There are no items in your list yet -
+    </div>
+
+    <ion-list show-delete="false" can-swipe="true">
+      <ion-item class="item item-icon-left item-remove-animate" ng-repeat="item in myitems.listItems">
+        <i ng-if="item.completed == '0'" ng-click="myitems.checkItem(item)" class="icon ion-android-checkbox-outline-blank" style="border-right: thin dotted gray; padding-right: 5px;"></i>
+        <i ng-if="item.completed == '1'" ng-click="myitems.uncheckItem(item)" class="icon ion-android-checkbox-outline" style="border-right: thin dotted gray; padding-right: 5px;"></i>
+
+        <div ng-click="myitems.speakLocation(item.list_item_location)">
+          <h3>{{item.list_item_name}}</h3>
+          <p>{{item.list_item_descr}}</p>
+          <p style="border-top-style: dotted; border-top-width: 1px; border-top-color: darkcyan; padding-top: 5px; margin-top: 5px; color: #396ab7; text-decoration: underline;">
+            <i class="ion-volume-high"></i>&nbsp;&nbsp;"{{item.list_item_location}}"
+          </p>
+        </div>
+        <ion-option-button class="button-assertive" ng-click="myitems.deleteListItem(item, $index)">Delete</ion-option-button>
+      </ion-item>
+    </ion-list>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,54 @@
+<ion-view class="signup-view auth-view" cache-view="false">
+
+  <ion-content class="auth-content" has-bouncing="false">
+    <div class="content-wrapper">
+      <div class="row row-no-padding everything-but-legal">
+        <div class="col">
+
+          <!--<div class="row social-buttons-row">-->
+            <!--<div class="col">-->
+              <!--<button class="button button-block icon-left ion-social-facebook social-button facebook-button" ng-click="signup.facebookAuth()">-->
+                <!--<span class="inner-text">Sign up via Facebook</span>-->
+              <!--</button>-->
+            <!--</div>-->
+          <!--</div>-->
+
+          <form name="signup.user" class="row form-container" novalidate>
+            <div class="col">
+              <div class="list">
+                <div class="item item-divider">
+                  <span>Sign up</span>
+                </div>
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">Username:</span>
+                  <input type="text" placeholder="required" required ng-model="signup.user.name">
+                </label>
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">Email Address:</span>
+                  <input type="email" placeholder="required" required ng-model="signup.user.email">
+                </label>
+                <label class="item item-input item-stacked-label">
+                  <span class="input-label">Password:</span>
+                  <input type="password" placeholder="required" required ng-model="signup.user.password">
+                </label>
+              </div>
+
+              <button class="button action-button button-block button-balanced" ng-click="signup.doSignUp()" ng-disabled="signup.user.$invalid || !signup.user.$dirty">SIGN UP</button>
+
+              <div class="col" style="text-align: center">
+                <button class="button button-outline button-positive" ng-click="signup.goSignIn()">Already a member? Sign In</button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+
+      <!--<div class="row xrow-no-padding legal-row">-->
+        <!--<div class="col">-->
+          <!--<p class="legal-text">By creating an account your agree to Jeanie's <a>Terms of Service</a>, <a>Privacy Policy</a>, <a>Cookie Policy</a> and <a>Content Policies</a></p>-->
+        <!--</div>-->
+      <!--</div>-->
+
+    </div>
+  </ion-content>
+</ion-view>

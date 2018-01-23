@@ -1,0 +1,248 @@
+.walkthrough-view
+{
+	.intro-header
+	{
+		background-color: $walkthrough-slider-bg !important;
+		background: $walkthrough-slider-bg !important;
+		border: none !important;
+		background-size: 0px !important; // To remove bottom border on header
+
+		.buttons
+		{
+			position: absolute;
+	    top: 5px;
+	    right: 5px;
+	    bottom: 5px;
+		}
+
+		.skip-button
+		{
+			color: $walkthrough-color;
+			font-size: 14px;
+		}
+	}
+
+	.intro-content
+	{
+		margin: 0px;
+		padding: 0px;
+
+		.scroll
+		{
+			height: 100%;
+		}
+	}
+
+	.slider-row
+	{
+		height: $walkthrough-slider-height;
+		margin: 0px;
+		background: $walkthrough-slider-bg;
+
+		& > .col
+		{
+			height: 100%;
+		}
+
+		.intro-slider
+		{
+			height: 100%;
+
+			.slide-row
+			{
+				height: 100%;
+				position: relative;
+			}
+
+			.slide-title
+			{
+				text-align: center;
+				font-weight: 400;
+				color: $walkthrough-color;
+				font-size: 42px;
+			}
+
+			.slide-sub-title
+			{
+				text-align: center;
+				color: $walkthrough-color;
+				font-weight: 300;
+				font-size: 20px;
+
+				position: absolute;
+			  width: 90%;
+			  bottom: 25%;
+				left: 5%;
+			}
+
+			.slide-1
+			{
+				.logo-image-container
+				{
+					width: 35%;
+					margin: 8% auto 0px;
+				}
+
+				.logo-image
+				{
+					&.pre-img
+					{
+						border-radius: 8px;
+					}
+
+					img
+					{
+						width: 100%;
+					}
+				}
+			}
+
+			.slide-2,
+			.slide-3,
+			.slide-4
+			{
+				.slide-image-container
+				{
+				  width: 80%;
+					margin: 5% auto 0px;
+				}
+
+				.slide-image
+				{
+					img
+					{
+						width: 100%;
+					}
+				}
+			}
+		}
+
+		.slider-pager
+		{
+			height: initial;
+			bottom: 10px;
+
+			.slider-pager-page
+			{
+				color: $walkthrough-slider-pager-color;
+				margin: 0px 4px;
+	  		width: 10px;
+
+				.icon
+				{
+					font-size: 10px;
+				}
+			}
+		}
+	}
+
+	.actions-row
+	{
+		height: $walkthrough-actions-height;
+		margin: 0px;
+		padding: 0px 5px;
+
+		.main-subtitle
+		{
+			color: $walkthrough-color;
+			font-size: 15px;
+			font-weight: 300;
+			text-align: center;
+			margin: 0px;
+			line-height: 19px;
+		}
+
+		.second-subtitle
+		{
+			color: $walkthrough-subtitle-color;
+			font-size: 10px;
+			text-align: center;
+			margin: 0px;
+			line-height: 14px;
+		}
+
+		.facebook-connect-button
+		{
+			@include button-style($facebook, $facebook, darken($facebook, 5%), darken($facebook, 5%), $walkthrough-facebook-button-color);
+		  font-size: 15px;
+			min-height: $button-height;
+			line-height: $button-height - 5px;
+			margin: 8px 0px;
+		}
+	}
+
+	.buttons-row
+	{
+		height: $walkthrough-buttons-height;
+		margin: 0px;
+
+		.auth-button
+		{
+			@include button-style($walkthrough-bg, $walkthrough-buttons-border-color, darken($walkthrough-bg, 5%), darken($walkthrough-buttons-border-color, 5%), $walkthrough-color);
+			margin: 0px;
+			border-radius: 0px;
+			border-style: solid;
+			border-width: 0px;
+			border-top-width: 1px;
+			font-size: 14px;
+  		font-weight: 500;
+
+			&::after
+			{
+				top: 0px;
+				right: 0px;
+				bottom: 0px;
+				left: 0px;
+			}
+		}
+
+		.col:first-child
+		{
+			.auth-button
+			{
+				border-right-width: 1px;
+			}
+		}
+	}
+
+
+
+
+}
+
+// .walkthrough-view
+// {
+// 	background-color: white;
+// 	color: $walkthrough-color;
+// 	.bg, .second-view{
+// 	img{
+// 	width:120px;
+// 	margin-top:100px;
+// 	}
+// 	background-color:$walkthrough-bg;
+// 	height:70vh;
+// 	width:100%;
+// 	text-align:center;
+// 	padding-top:0px;
+// 		p{
+// 		color:red;
+// 		font-size:40px;
+// 		}
+// 		h6{
+// 		color:red;
+// 		font-size:24px;
+// 		}
+// 	}
+// 	.second-view{
+// 	height:20vh;
+// 	background-color:white;
+// 	button{
+// 	background-color:$facebook;
+// 	border-radius:3px;
+// 	color:white;
+// 	width:95%;
+// 	height:50px;
+// 	border-color:transparent;
+// 	}
+// 	}
+// }

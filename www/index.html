@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title></title>
+
+    <link href="lib/ionic/css/ionic.css" rel="stylesheet">
+    <link href="css/ionic.app.css" rel="stylesheet">
+    <link href="css/style-WHITE.css" rel="stylesheet">
+
+    <!-- ionic/angularjs js -->
+    <script src="lib/ionic/js/ionic.bundle.js"></script>
+
+    <!-- cordova script (this will be a 404 during development) -->
+    <script src="lib/ngCordova/dist/ng-cordova.js"></script>
+    <!-- Cordova is bootstrapped by ionic-platform-web-client, uncomment this if you remove ionic-platform-web-client... -->
+    <script src="cordova.js"></script>
+
+    <!--Third-Party libraries-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script src="js/jquery.panzoom.js"></script>
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-auth.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.3.0/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.4.0/firebase-storage.js"></script>
+    <!-- Facebook -->
+    <script src="https://connect.facebook.net/en_US/sdk.js"></script>
+
+    <!-- AngularFire (angularized Firebase library) -->
+    <script src="https://cdn.firebase.com/libs/angularfire/1.2.0/angularfire.min.js"></script>
+
+    <!-- App -->
+    <script src="app.js"></script>
+    <script src="states/routes.js"></script>
+
+    <!-- Loading -->
+    <script src="states/loading/loading-controller.js"></script>
+
+    <!-- Side Menu -->
+    <script src="states/side-menu/side-menu-controller.js"></script>
+    <script src="states/side-menu/side-menu-auth-controller.js"></script>
+
+    <!-- Authorization pages -->
+    <script src="states/auth/login-controller.js"></script>
+    <script src="states/auth/walkthrough-controller.js"></script>
+    <script src="states/auth/signup-controller.js"></script>
+    <script src="states/auth/signin-controller.js"></script>
+    <script src="states/auth/forgot-password-controller.js"></script>
+
+    <!-- My Lists pages-->
+    <script src="states/mylists/mylists-controller.js"></script>
+    <script src="states/mylists/mylist-items-controller.js"></script>
+
+    <script src="states/location/location-controller.js"></script>
+
+    <!-- Stores -->
+    <script src="states/stores/stores-controller.js"></script>
+    <script src="states/stores/store-sel-controller.js"></script>
+
+    <!--MyStore-->
+    <script src="states/stores/mystore-cat1-controller.js"></script>
+    <script src="states/stores/mystore-cat2-controller.js"></script>
+
+    <script src="states/profile/profile-controller.js"></script>
+    <script src="states/about/about-controller.js"></script>
+    <script src="states/concierge/concierge-controller.js"></script>
+    <script src="states/concierge/concierge-comments-controller.js"></script>
+    <script src="states/map/map-controller.js"></script>
+
+    <!--Services-->
+    <script src="components/services/auth-service.js"></script>
+    <script src="components/services/sounds-service.js"></script>
+    <script src="components/services/conversation-service.js"></script>
+    <script src="components/services/storage-service.js"></script>
+    <script src="components/services/utils-service.js"></script>
+    <script src="components/services/app-service.js"></script>
+    <script src="components/services/concierge-service.js"></script>
+    <script src="components/services/concierge-ios-service.js"></script>
+    <script src="components/services/concierge-android-service.js"></script>
+    <script src="components/services/google-utils-service.js"></script>
+  </head>
+
+  <body ng-app="ionicApp" ng-cloak="">
+    <ion-nav-view></ion-nav-view>
+  </body>
+</html>

@@ -1,0 +1,23 @@
+<ion-view class="background">
+
+    <div class="bar bar-subheader" style="background-color: #84d1f2" ng-click="mystore.showMyStoreModal()">
+        <button class="button button-light">
+            <p class="title" style="font-weight: bold">{{mystore.currStore}}</p>
+        </button>
+    </div>
+
+    <ion-content id="mystore-list" class="background has-subheader">
+        <ion-spinner icon="circles" ng-show="locator.showSpinner"></ion-spinner>
+
+        <ion-list>
+            <ion-item class="location-item item-text-wrap item-avatar item-icon-right" ng-class="{'selected': product.productCategoryId == mystore.selectedProductId}" ng-repeat="product in mystore.products track by $index" ng-click="mystore.getMap(product)">
+              <img src="icons/prodcat-000.png">
+              <div class="location-item-address">
+                <h2>{{product.categoryName}}</h2>
+              </div>
+              <i class="icon ion-ios-arrow-forward"></i>
+            </ion-item>
+        </ion-list>
+    </ion-content>
+
+</ion-view>
